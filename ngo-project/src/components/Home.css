@@ -2,12 +2,11 @@ video {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: absolute;
     z-index: -1;
 }
 
-.home-container {
-    /* background: url('/public/images/img-home.jpg') center center/cover no-repeat; */
+.home-container {    
     height: 100vh;
     width: 100%;
     display: flex;

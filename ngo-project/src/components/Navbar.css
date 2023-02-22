@@ -1,5 +1,6 @@
 .navbar {
-    background: linear-gradient(90deg, rgb(19, 18, 18) 0%, rgb(26, 23, 23) 100%);
+    /* background: linear-gradient(90deg, rgb(19, 18, 18) 0%, rgb(26, 23, 23) 100%); */
+    /* background: rgb(19, 18, 18, 0.1);    */
     height: 80px;
     display: flex;
     justify-content: center;
@@ -7,7 +8,7 @@
     font-size: 1.2rem;
     position: sticky;
     top: 0;
-    z-index: 999;
+    /* z-index: 999; */
   }
   
   .navbar-container {
@@ -29,15 +30,12 @@
     align-items: center;
   }
   
-  .fa-cloud {
+  .fa-heart {
     margin-left: 0.5rem;
     font-size: 1.8rem;
   } 
   
-  .fa-bee {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-  } 
+
    
   .nav-menu {
     display: grid;
