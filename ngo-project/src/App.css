@@ -1,0 +1,25 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 35px;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    padding-top: 25px;
+    justify-content: center;
+    background: url('/public/pictures/sunflower.jpg') center center/cover no-repeat;
+    
+  }
+  .label {
+    display: relative;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  }
