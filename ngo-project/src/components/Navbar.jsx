@@ -8,8 +8,15 @@ function Navbar() {
     const [click, setClick] = useState(false);
 
 
-    const handleClick = () => setClick(!click);
+    //const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+
+    function handleClick(e) {
+        closeMobileMenu()
+        console.log(e.target.innerText);
+        window.location = `#${e.target.innerText}`
+
+    }
 
 
     return (
@@ -26,7 +33,7 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/' className='nav-links' onClick={(e)=> handleClick(e)}>
                                 Home
                             </Link>
                         </li>
@@ -34,16 +41,16 @@ function Navbar() {
                             <Link
                                 to='/'
                                 className='nav-links'
-                                onClick={closeMobileMenu}
+                                onClick={(e)=> handleClick(e)}
                             >
-                                About Us
+                                About Us
                             </Link>
                         </li>
                         <li className='nav-item'>
                             <Link
                                 to='/'
                                 className='nav-links'
-                                onClick={closeMobileMenu}
+                                onClick={(e)=> handleClick(e)}
                             >
                                 Donate
                             </Link>

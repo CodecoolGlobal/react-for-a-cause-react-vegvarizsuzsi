@@ -15,7 +15,7 @@ function Donations() {
     return (
         <>
             <div className="contact" id="contact">
-                    <label className="label">Name:</label><br></br>
+                    <label className="label" id="Donate" >Name:</label><br></br>
                     <input className="donationform" id="Name" onInput={(e) => handleInput(e)}></input><br></br>
                     <label className="label">Donation:</label><br></br>
                     <input className="donationform" id="Donation" onInput={(e) => handleInput(e)}></input><br></br>
