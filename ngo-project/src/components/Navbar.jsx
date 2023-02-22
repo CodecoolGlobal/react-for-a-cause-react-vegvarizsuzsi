@@ -38,9 +38,14 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link
-                                to='/'
+                            <a
+                                href="#about"
                                 className='nav-links'
+                                onClick={closeMobileMenu}
+                                
+                            >
+                                About Us
+                            </a>
                                 onClick={(e)=> handleClick(e)}
                             >
                                 About Us
