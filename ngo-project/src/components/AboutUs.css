@@ -10,8 +10,7 @@
 }
 
 h1 {
-    color: gold;
-    font-size: 70px;
+    color: gold;    
     margin-top: -300px;
     text-align: center;
     display: block;
@@ -83,6 +82,7 @@ h1 {
 
 .aboutus__item__text {
     position: absolute;
+    color: #252e48;
     right: 0;
     bottom: 0;
     left: 0;
