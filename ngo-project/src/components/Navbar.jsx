@@ -31,13 +31,14 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link
-                                to='/'
+                            <a
+                                href="#about"
                                 className='nav-links'
                                 onClick={closeMobileMenu}
+                                
                             >
                                 About Us
-                            </Link>
+                            </a>
                         </li>
                         <li className='nav-item'>
                             <Link

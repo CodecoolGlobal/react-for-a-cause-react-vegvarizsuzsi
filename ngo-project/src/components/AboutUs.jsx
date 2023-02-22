@@ -4,7 +4,7 @@ import AboutUsItem from './AboutUsItem';
 
 function AboutUs() {
     return (
-        <div className='aboutus'>
+        <div className='aboutus' id="about">
             <h1>ABOUT US</h1>
             <div className='aboutus__container'>
                 <div className='aboutus__wrapper'>
