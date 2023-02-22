@@ -15,6 +15,7 @@ function Donations() {
     return (
         <>
             <div className="contact" id="contact">
+                <div>
                     <label className="label" id="Donate" >Name:</label><br></br>
                     <input className="donationform" id="Name" onInput={(e) => handleInput(e)}></input><br></br>
                     <label className="label">Donation:</label><br></br>
@@ -25,6 +26,7 @@ function Donations() {
                     <textarea className="donationform" id="Comment" onInput={(e) => handleInput(e)}></textarea><br></br>
                     <button onClick={(e)=>handleClick(e)}>Send Donation</button>
                     <div>Fields marked with * are optional, champ</div>
+                    </div>
             </div>
         </>
 

@@ -14,7 +14,7 @@ function Navbar() {
     function handleClick(e) {
         closeMobileMenu()
         console.log(e.target.innerText);
-        window.location = `#${e.target.innerText}`
+        window.location = `#${e.target.innerText.replaceAll(' ', '')}`
 
     }
 
@@ -43,7 +43,7 @@ function Navbar() {
                                 className='nav-links'
                                 onClick={(e)=> handleClick(e)}
                             >
-                                About Us
+                                About Us
                             </Link>
                         </li>
                         <li className='nav-item'>
