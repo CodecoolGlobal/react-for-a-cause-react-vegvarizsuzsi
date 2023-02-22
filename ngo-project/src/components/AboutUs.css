@@ -1,0 +1,109 @@
+.aboutus {
+    padding: 4rem;
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: contain;
+}
+
+h1 {
+    color: gold;
+    font-size: 70px;
+    margin-top: -300px;
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+/* .aboutus > p {
+    margin-top: 8px;
+    color: #0c0c0c;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  } */
+
+.aboutus__container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1120px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.aboutus__wrapper {
+    position: relative;
+    margin: 50px 0 45px;
+}
+
+.aboutus__items {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.aboutus__item {
+    display: flex;
+    flex: 5;
+    margin: 0 1rem;
+    border-radius: 10px;
+    width: 500px;
+    height: 410px;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+}
+
+.aboutus__item__title {
+    color: #252e48;
+    line-height: 24px;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    left: 5%;
+    display: block;
+    width: 450px;
+    height: 60px;
+    text-align: center;
+}
+
+.aboutus__item__text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 450px;
+    height: 250px;
+    text-align: justify;
+    margin: auto;
+    font-weight: lighter;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    .aboutus__item {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .aboutus__item {
+        margin-bottom: 2rem;
+    }
+}
