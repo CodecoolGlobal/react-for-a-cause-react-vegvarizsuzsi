@@ -1,24 +1,40 @@
 import { useState } from "react";
+import './bees.css'
 
 function Donations() {
 
 
-    let [userInfo, setUserInfo] = useState([])
+    let [userInfo, setUserInfo] = useState({})
     let [isSubmitted, setisSubmitted] = useState(false)
+    let [beeSwarm, setBeeSwarm] = useState([])
     function handleInput(e) {
         userInfo[e.target.id] = e.target.value
         setUserInfo(userInfo)
 
     }
     function handleClick(e) {
-        setisSubmitted(true)
-        let donatedAmount = userInfo.Donation
-        if(donatedAmount < 100){
-            alert('broooo');
+        let validDonation = false
+        if(userInfo.Donation > 0){
+            validDonation = true
         }
-        console.log(userInfo.Donation);
-        if (e.target.className)
-            console.log(userInfo);
+        if(validDonation){
+        setisSubmitted(true)
+        console.log(userInfo)
+            if(userInfo.Donation < 10){
+                setBeeSwarm([...beeSwarm, 1, ...beeSwarm])
+            } 
+            else if(userInfo.Donation < 30){
+                setBeeSwarm([...beeSwarm, 1, 1])
+            }
+            else {
+                setBeeSwarm([...beeSwarm, 1, 1, 1])
+            }
+            console.log(beeSwarm);
+        } 
+       
+        else {
+            alert('Please enter a valid donation')
+        }
     }
 
     return !isSubmitted?(
@@ -27,23 +43,24 @@ function Donations() {
                 <div className="containar">
                     <label className="label" id="Donate" >Name</label>
                     <input className="donationform" id="Name" onInput={(e) => handleInput(e)}></input>
-                    <label className="label">Donation </label>
-                    <input className="donationform" id="Donation" onInput={(e) => handleInput(e)}>
+                    <label className="label">Donation*</label>
+                    <input className="donationform" id="Donation" type='number' min='1' onInput={(e) => handleInput(e)}>
                         
                     </input>
-                    <label className="label">Email*</label>
+                    <label className="label">Email</label>
                     <input className="donationform" id="Email" onInput={(e) => handleInput(e)}></input>
-                    <label className="label">Comment*</label>
+                    <label className="label">Comment</label>
                     <textarea className="donationform" id="Comment" onInput={(e) => handleInput(e)}></textarea>
                     <button onClick={(e)=>handleClick(e)}>Send Donation</button>
-                    <div>Fields marked with * are optional, champ</div>
                     </div>
             </div>
         </>
 
     ):(
         <>
-        <div className="contact" id="Donate">TY</div>
+        <div className="contact" id="Donate">
+        {beeSwarm.map((el, index)=> (<image src="https://cdn.discordapp.com/attachments/1035185289150345347/1077577807061856356/toppng.com-bee-png-image-background-bee-stock-473x318.png" key={index} style={{"left": `${Math.random()*index*100}px`, "position": "relative", "top": `${Math.random()*index*40}px`, "transform":`rotate(${Math.random()*360}deg)` }} className="bees"></image>))}
+        </div>
         </>
     )
 }

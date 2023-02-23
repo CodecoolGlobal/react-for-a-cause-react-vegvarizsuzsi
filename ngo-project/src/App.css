@@ -51,3 +51,14 @@
     border-radius: 5%;
 
   }
+
+  .bees {
+    background-image: url("https://www.pngplay.com/wp-content/uploads/9/Bee-No-Background.png")center center/cover no-repeat !important;
+    
+    height: 40px;
+    width: 40px;
+    left: 20px;
+    background-size: contain;
+    
+}
+
