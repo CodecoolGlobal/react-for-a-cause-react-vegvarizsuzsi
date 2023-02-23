@@ -6,7 +6,7 @@ function Donations() {
 
     let [userInfo, setUserInfo] = useState({})
     let [isSubmitted, setisSubmitted] = useState(false)
-    let [beeSwarm, setBeeSwarm] = useState([])
+    let [beeSwarm, setBeeSwarm] = useState([1,2,3])
     function handleInput(e) {
         userInfo[e.target.id] = e.target.value
         setUserInfo(userInfo)
@@ -21,13 +21,13 @@ function Donations() {
         setisSubmitted(true)
         console.log(userInfo)
             if(userInfo.Donation < 10){
-                setBeeSwarm([...beeSwarm, 1, ...beeSwarm])
+                setBeeSwarm([...beeSwarm, 1])
             } 
             else if(userInfo.Donation < 30){
-                setBeeSwarm([...beeSwarm, 1, 1])
+                setBeeSwarm([...beeSwarm, ...beeSwarm])
             }
             else {
-                setBeeSwarm([...beeSwarm, 1, 1, 1])
+                setBeeSwarm([...beeSwarm, ...beeSwarm,...beeSwarm])
             }
             console.log(beeSwarm);
         } 
@@ -59,7 +59,9 @@ function Donations() {
     ):(
         <>
         <div className="contact" id="Donate">
-        {beeSwarm.map((el, index)=> (<image src="https://cdn.discordapp.com/attachments/1035185289150345347/1077577807061856356/toppng.com-bee-png-image-background-bee-stock-473x318.png" key={index} style={{"left": `${Math.random()*index*100}px`, "position": "relative", "top": `${Math.random()*index*40}px`, "transform":`rotate(${Math.random()*360}deg)` }} className="bees"></image>))}
+        {beeSwarm.map((el, index)=> (
+        <image src="https://cdn.discordapp.com/attachments/1035185289150345347/1077577807061856356/toppng.com-bee-png-image-background-bee-stock-473x318.png" 
+        key={index} style={{"left": `${Math.random()*index*100}px`, "position": "relative", "top": `${Math.random()*index*20}px`, "transform":`rotate(${Math.random()*360}deg)` }} className="bees"></image>))}
         </div>
         </>
     )
