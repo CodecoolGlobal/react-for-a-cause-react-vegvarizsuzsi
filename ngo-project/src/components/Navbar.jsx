@@ -38,7 +38,7 @@ function Navbar() {
                     <div className='navbar-container'>
                         <a href="#Home" className='navbar-logo' onClick={closeMobileMenu}>
                             BEE HERO
-                            <i class='fas fa-heart' />
+                            <i className='fas fa-heart' />
 
                         </a>
                         <div className='menu-icon' onClick={handleClick}>
