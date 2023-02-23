@@ -42,15 +42,15 @@ function Donations() {
             <div className="contact" id="contact">
                 <div className="containar">
                     <label className="label" id="Donate" >Name</label>
-                    <input className="donationform" id="Name" onInput={(e) => handleInput(e)}></input>
+                    <input className="donationform" placeholder='Enter your name' id="Name" onInput={(e) => handleInput(e)}></input>
                     <label className="label">Donation*</label>
-                    <input className="donationform" id="Donation" type='number' min='1' onInput={(e) => handleInput(e)}>
+                    <input className="donationform" placeholder='$$$' id="Donation" type='number' min='1' onInput={(e) => handleInput(e)}>
                         
                     </input>
                     <label className="label">Email</label>
-                    <input className="donationform" id="Email" onInput={(e) => handleInput(e)}></input>
+                    <input className="donationform" placeholder='Enter your email' id="Email" onInput={(e) => handleInput(e)}></input>
                     <label className="label">Comment</label>
-                    <textarea className="donationform" id="Comment" onInput={(e) => handleInput(e)}></textarea>
+                    <textarea className="donationform" placeholder='Enter your comment' id="Comment" onInput={(e) => handleInput(e)}></textarea>
                     <button onClick={(e)=>handleClick(e)}>Send Donation</button>
                     </div>
             </div>
