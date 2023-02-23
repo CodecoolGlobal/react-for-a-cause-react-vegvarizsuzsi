@@ -19,10 +19,10 @@ function Navbar() {
 
 
     // const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+    const closeMobileMenu = () => setClick(!click);
 
-    function handleClick(e) {
-        setClick(!click)
+    function handleClick(e) {  
+        setClick(!click);     
         closeMobileMenu()
         console.log(e.target.innerText);
         window.location = `#${e.target.innerText.replaceAll(' ', '')}`
