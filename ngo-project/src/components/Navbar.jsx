@@ -12,6 +12,7 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
     function handleClick(e) {
+        setClick(!click)
         closeMobileMenu()
         console.log(e.target.innerText);
         window.location = `#${e.target.innerText.replaceAll(' ', '')}`

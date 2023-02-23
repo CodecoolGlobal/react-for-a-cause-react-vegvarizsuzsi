@@ -6,6 +6,7 @@
     justify-content: center;
     height: 100vh;
     padding-top: 35px;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   }
   
   .contact {
@@ -16,6 +17,7 @@
     padding-top: 25px;
     justify-content: center;
     background: url('/public/pictures/sunflower.jpg') center center/cover no-repeat;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     
   }
   .label {
@@ -23,10 +25,36 @@
     margin-left: auto;
   margin-right: auto;
   width: 50px;
+  justify-content: center;
   }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', sans-serif;
+  }
+
+.donationform {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  margin: auto;
+
+}
+
+  .containar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    background-color: gold;
+    opacity: 0.1;
+    margin: auto;
+    border-radius: 5%;
+
+  }
+  .containar:hover{
+    opacity: 1;
   }

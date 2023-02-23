@@ -2,35 +2,47 @@ import { useState } from "react";
 
 function Donations() {
 
+
     let [userInfo, setUserInfo] = useState([])
+    let [isSubmitted, setisSubmitted] = useState(false)
     function handleInput(e) {
         userInfo[e.target.id] = e.target.value
         setUserInfo(userInfo)
        
     }
     function handleClick(e) {
-        if(e.target.className)
-        console.log(userInfo);
+        setisSubmitted(true)
+        let donatedAmount = userInfo.Donation
+        if(donatedAmount < 100){
+            alert('broooo');
+        }
+        console.log(userInfo.Donation);
     }
 
-    return (
+    return !isSubmitted?(
         <>
             <div className="contact" id="contact">
-                <div>
-                    <label className="label" id="Donate" >Name:</label><br></br>
-                    <input className="donationform" id="Name" onInput={(e) => handleInput(e)}></input><br></br>
-                    <label className="label">Donation:</label><br></br>
-                    <input className="donationform" id="Donation" onInput={(e) => handleInput(e)}></input><br></br>
-                    <label className="label">Email*:</label><br></br>
-                    <input className="donationform" id="Email" onInput={(e) => handleInput(e)}></input><br></br>
-                    <label className="label">Comment*:</label><br></br>
-                    <textarea className="donationform" id="Comment" onInput={(e) => handleInput(e)}></textarea><br></br>
+                <div className="containar">
+                    <label className="label" id="Donate" >Name</label>
+                    <input className="donationform" id="Name" onInput={(e) => handleInput(e)}></input>
+                    <label className="label">Donation </label>
+                    <input className="donationform" id="Donation" onInput={(e) => handleInput(e)}>
+                        
+                    </input>
+                    <label className="label">Email*</label>
+                    <input className="donationform" id="Email" onInput={(e) => handleInput(e)}></input>
+                    <label className="label">Comment*</label>
+                    <textarea className="donationform" id="Comment" onInput={(e) => handleInput(e)}></textarea>
                     <button onClick={(e)=>handleClick(e)}>Send Donation</button>
                     <div>Fields marked with * are optional, champ</div>
                     </div>
             </div>
         </>
 
+    ):(
+        <>
+        <div className="contact" id="Donate">TY</div>
+        </>
     )
 }
 
