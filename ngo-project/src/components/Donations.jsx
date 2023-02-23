@@ -8,7 +8,7 @@ function Donations() {
     function handleInput(e) {
         userInfo[e.target.id] = e.target.value
         setUserInfo(userInfo)
-       
+
     }
     function handleClick(e) {
         setisSubmitted(true)
@@ -17,6 +17,8 @@ function Donations() {
             alert('broooo');
         }
         console.log(userInfo.Donation);
+        if (e.target.className)
+            console.log(userInfo);
     }
 
     return !isSubmitted?(
