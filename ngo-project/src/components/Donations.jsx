@@ -26,10 +26,12 @@ function Donations() {
             else if(userInfo.Donation < 30){
                 setBeeSwarm([...beeSwarm, ...beeSwarm])
             }
-            else {
+            else if(userInfo.Donation < 500){
                 setBeeSwarm([...beeSwarm, ...beeSwarm,...beeSwarm])
             }
-            console.log(beeSwarm);
+            else {
+                setBeeSwarm([...beeSwarm, ...beeSwarm,...beeSwarm,...beeSwarm, ...beeSwarm,...beeSwarm])
+            }
         } 
        
         else {
@@ -60,8 +62,8 @@ function Donations() {
         <>
         <div className="contact" id="Donate">
         {beeSwarm.map((el, index)=> (
-        <image src="https://cdn.discordapp.com/attachments/1035185289150345347/1077577807061856356/toppng.com-bee-png-image-background-bee-stock-473x318.png" 
-        key={index} style={{"left": `${Math.random()*index*100}px`, "position": "relative", "top": `${Math.random()*index*20}px`, "transform":`rotate(${Math.random()*360}deg)` }} className="bees"></image>))}
+        <div src="https://cdn.discordapp.com/attachments/1035185289150345347/1077577807061856356/toppng.com-bee-png-image-background-bee-stock-473x318.png" 
+        key={index} style={{"left": `${Math.random()*index*100}px`, "position": "relative", "top": `${Math.random()*index*20}px`, "transform":`rotate(${Math.random()*360}deg)` }} className="bees"></div>))}
         </div>
         </>
     )
